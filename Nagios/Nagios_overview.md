@@ -87,3 +87,37 @@ Nagios được xây dựng theo kiến trúc client/server . Nagios kiểm tra 
 * Plugins : Chúng được sử dụng để kiểm tra một dịch vụ và trả về kết quả cho máy chủ Nagios. Ngoài ra, chúng được cấu hình bởi người dùng.
 
 * Nagios có các plugins để theo dõi , nó kết nối với apache được kiểm soát bởi CGI để hiển thị kết quả. Hơn nữa cơ sở dữ liệu kết nối với nagios để giữ một file log.
+
+
+Nagios có các plugins để theo dõi , nó kết nối vs apache được kiểm soát bởi CGI để hiển thị kết quả. Hơn nữa cơ sở dữ liệu kết nối với nagios để giữ một file log.
+
+* Kiến trúc bên ngoài của Nagios:
+
+<img src="/img/3.png">
+
+* Plugins của nagios server kiểm tra csc dịch vụ của máy khác sử dụng plugins của nó.
+
+* NRPE (sử dụng NRPE để gửi dữ liệu được mã hóa bằng SSL / TSL).
+
+* SSH (chạy trực tiếp qua sercure shell).
+
+* SNMP (sử dụng cho máy chủ và các thiết bị mạng).
+
+* NSCA (Để phân phối tải lên máy chủ nagios).
+
+
+### 5. Cách thức hoạt động
+
+
+* Đối với các dịch vụ mạng có giao thức giao tiếp qua mạng như SMTP, HTTP, FTP,… Nagios có thể tiến hành kiểm tra trực tiếp một dịch vụ xem nó đang hoạt động hay không bằng cách gửi truy vấn kết nối dịch vụ đến server dịch vụ và đợi kết quả trả về. Các plugin phục vụ kiểm tra này được đặt ngay trên server Nagios.
+
+* Nagios sẽ điểu khiển các plugin cục bộ trên client qua secure shell ssh bằng plugin check_by_ssh. Phương pháp này yêu cầu một tài khoản truy cập host được giám sát nhưng nó có thể thực thi được tất cả các plugin được cài trên host đó.
+
+* NRPE là một addon đi kèm với Nagios. Nó trợ giúp việc thực thi các plugin được cài đặt trên máy/thiết bị được giám sát. Khi nhận được truy vấn từ Nagios server thì nó gọi các plugin cục bộ phù hợp trên host này, thực hiện kiểm tra và trả về kết quả cho Nagios server
+
+* Giám sát qua SNMP để theo dõi trạng thái của các client, các thiết bị mạng có hỗ trợ SNMP, có được thông tin về tình trạng hiện thời của thiết bị. Ví dụ như với SNMP, Nagios có thể biết được các cổng của Switch, router có mở hay không, thời gian Uptime...
+
+* Nagios sử dụng công cụ NSCA (Nagios Service Check Acceptor) gửi các kết quả kiểm tra từ ứng dụ ng của bạn về server Nagios. Công cụ này giúp cho thông tin gửi trên mạng được an toàn hơn vì nó được mã hóa và xác thực.
+
+
+
