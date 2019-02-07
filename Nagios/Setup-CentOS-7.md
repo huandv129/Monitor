@@ -183,7 +183,7 @@ define command{
 
 Thoát và lưu lại file.
 
-Tiếp tục cài đặt : 
+Tiếp tục cài đặt : https://github.com/anhbka/Monitor/blob/master/Nagios/Setup_host_giam_sat.md
 
 
 
