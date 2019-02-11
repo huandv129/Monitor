@@ -171,7 +171,7 @@ systemctl start nagios
 http://địa-chỉ-ip/nagios
 ```
 
-<img src="../../images/nagios1.png" />
+<img src="/img/nagios1.png" />
 
 <a name="2.4"></a>
 #### 2.4 Cấu hình giám sát 1 host Linux
@@ -234,7 +234,7 @@ systemctl restart nagios
 
 Vào giao diện Web để kiểm tra
 
-<img src="../../images/nagios2.png" />
+<img src="/img/nagios2.png" />
 
 <a name="2.5"></a>
 #### 2.5 Giám sát MySQL
