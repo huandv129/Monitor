@@ -61,7 +61,23 @@ Với Ubuntu:
 
 <img src="/img/7.png">
 
-
+```
+cat /etc/xinetd.d/nrpe
+service nrpe
+{
+    flags           = REUSE
+    socket_type     = stream
+    port            = 5666
+    wait            = no
+    user            = nagios
+    group           = nagios
+    server          = /usr/local/nagios/bin/nrpe
+    server_args     = -c /usr/local/nagios/etc/nrpe.cfg --inetd
+    log_on_failure  += USERID
+    disable         = no
+    only_from       = 192.168.30.80
+}
+```
 
 Để check các dịch vụ khác, chúng ta thêm câu lệnh tương tự với hướng dẫn bên trên. Lưu ý, cần chạy thử plugin trước để có hướng dẫn sử dụng.
 
@@ -111,7 +127,7 @@ define host {
         use                             linux-server
         host_name                       web01
         alias                           My Apache server
-        address                         192.168.100.199
+        address                         192.168.100.201
         max_check_attempts              5
         check_period                    24x7
         notification_interval           30
@@ -131,6 +147,8 @@ define service {
         notifications_enabled           1		
 }
 ```
+
+
 
 Sau khi sửa xong, chúng ta lưu lại file và khởi động lại nagios server.
 

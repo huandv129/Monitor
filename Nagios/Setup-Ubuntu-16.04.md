@@ -239,12 +239,12 @@ Vào giao diện Web để kiểm tra
 <a name="2.5"></a>
 #### 2.5 Giám sát MySQL
 
-Vui lòng bấm vào [đây](4.Monitor-MySQL.md).
+Vui lòng bấm vào [đây](Monitor-MySQL.md).
 
 <a name="2.6"></a>
 #### 2.6 Giám sát RabbitMQ
 
-Vui lòng bấm vào [đây](5.Monitor-RabbitMQ.md).
+Vui lòng bấm vào [đây](Monitor-RabbitMQ.md).
 
 <a name="3"></a>
 ### 3. Tham khảo
