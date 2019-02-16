@@ -18,7 +18,7 @@
 ## 1. Tổng quan về OMD.
 <a name="1"></a>
 
-![omd](/images/1-omd-icon.png)
+<img src="/img/1-omd-icon.png">
 
 OMD - Open Monitoring Distribution là một project được phát triển từ năm 2010 bới Mathias Kettner. OMD sử dụng nhân là Nagios Core, kết hợp với các phần mềm mã nguồn mở khác để đóng gói thành một sản phẩm phục vụ cho nhu cầu **giám sát**, **cảnh báo** và **hiển thị**
 
