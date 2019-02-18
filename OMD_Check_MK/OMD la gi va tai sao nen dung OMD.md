@@ -1,4 +1,4 @@
-# Giải pháp giám sát tốt nhât năm 2015 - OMD (Open Monitoring Distribution)
+# Giải pháp giám sát tốt nhất năm 2015 - OMD (Open Monitoring Distribution)
 
 # Mục lục:
 - [1. Tổng quan về OMD](#1)
